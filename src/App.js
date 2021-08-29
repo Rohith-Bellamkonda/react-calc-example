@@ -27,13 +27,18 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div>
-        <input type="text" value={this.state.result} />
-        <div>
-          <button onClick={this.clear}>Clear</button>
+      <div className="keypad">
+        <input id="resultbar" type="text" value={this.state.result} />
+        <div className="calc">
+          <button id="clearbutton" onClick={this.clear}>
+            Clear
+          </button>
+
           <button onClick={this.backspace}>Del</button>
-        </div>
-        <div>
+          <button onClick={this.handleClick} value="/">
+            /
+          </button>
+
           <button onClick={this.handleClick} value="7">
             7
           </button>
@@ -46,8 +51,7 @@ class App extends React.Component {
           <button onClick={this.handleClick} value="+">
             +
           </button>
-        </div>
-        <div>
+
           <button onClick={this.handleClick} value="4">
             4
           </button>
@@ -60,8 +64,7 @@ class App extends React.Component {
           <button onClick={this.handleClick} value="*">
             X
           </button>
-        </div>
-        <div>
+
           <button onClick={this.handleClick} value="1">
             1
           </button>
@@ -74,16 +77,14 @@ class App extends React.Component {
           <button onClick={this.handleClick} value="-">
             -
           </button>
-        </div>
 
-        <div>
           <button onClick={this.handleClick} value="0">
             0
           </button>
           <button onClick={this.handleClick} value=".">
             .
           </button>
-          <button onClick={this.EqualsTo} value="=">
+          <button id="equalbutton" onClick={this.EqualsTo} value="=">
             =
           </button>
         </div>
